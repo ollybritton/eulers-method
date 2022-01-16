@@ -29,8 +29,6 @@ function setup() {
   canvas_dom.addEventListener("touchend",    function(event) {event.preventDefault()})
   canvas_dom.addEventListener("touchcancel", function(event) {event.preventDefault()})
 
-  document.body.style.zoom = 1.5
-
   minX = -width / 2
   maxX = width / 2
   minY = -height / 2
