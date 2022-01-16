@@ -23,6 +23,14 @@ function setup() {
   createCanvas(windowWidth, windowHeight * sketchHeight).parent("sketch");
   noStroke();
 
+  var canvas_dom = document.querySelector("canvas")
+  canvas_dom.addEventListener("touchstart",  function(event) {event.preventDefault()})
+  canvas_dom.addEventListener("touchmove",   function(event) {event.preventDefault()})
+  canvas_dom.addEventListener("touchend",    function(event) {event.preventDefault()})
+  canvas_dom.addEventListener("touchcancel", function(event) {event.preventDefault()})
+
+  document.body.style.zoom = 1.5
+
   minX = -width / 2
   maxX = width / 2
   minY = -height / 2
@@ -177,10 +185,3 @@ for (let elem of document.querySelectorAll(".example")) {
     window.scrollTo({top: 0, behavior: 'smooth'});
   })
 }
-var canvas_dom = document.querySelector("canvas")
-canvas_dom.addEventListener("touchstart",  function(event) {event.preventDefault()})
-canvas_dom.addEventListener("touchmove",   function(event) {event.preventDefault()})
-canvas_dom.addEventListener("touchend",    function(event) {event.preventDefault()})
-canvas_dom.addEventListener("touchcancel", function(event) {event.preventDefault()})
-
-document.body.style.zoom = 1.5
