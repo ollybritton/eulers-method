@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <div id="sketch"></div>
+    <br />
+    
+    <main>
+      <div class="explanation">
+        <div id="controls">
+          <div class="col">
+            <span class="small">What is \(\text{d}y/\text{d}x\)?</span>
+            <div id="controls-input-function"></div>
+            <div id="controls-button-update"></div>
+            <p class="error" id="error"></p>
+          </div>
+          <div class="col">
+            <span class="small">What is the step size \(h\)? </span><span class="small param" id="step-size">1.000</span>
+            <div id="controls-slider-h"></div>
+            <span class="small">How many particles should be shown? </span><span class="small param" id="particle-limit">800</span>
+            <div id="controls-slider-limit"></div>
+            <div id="controls-checkbox-normalise"></div>
+          </div>
+        </div>
+        <h3>Euler's method</h3>
+        <p>
+          Euler's method is a technique for approximately solving first-order
+          differential equations. You pick a point and update the coordintes
+          according to a rule that means it will follow the shape of the
+          solution curve.
+        </p>
+
+        <div class="math">
+          $$ y_{r + 1} = y_r + h \frac{\text{d}y}{\text{d}x}_r $$
+        </div>
+        
+        <p>
+          You can either write your own function or use one of the examples below. The function should be written in JavaScript syntax in terms of \(x\) and \(y\). Common functions like \(\sin\), \(\cos\) and \(\text{abs}\) are included. Because it is JavaScript, it means you can't have implicit multiplication, so the code "<kbd>100 + xy</kbd>" wouldn't work but "<kbd>100 + x*y</kbd>" would.
+        </p>
+        
+        <p>
+          You can also draw your own points by dragging with your finger or mouse.
+        </p>
+
+        <h4>Examples</h4>
+
+        <ul>
+          <li class="example" data-expr="y/x">\(\frac{\text{d}y}{\text{d}x} = \frac{y}{x}\)</li>
+          <br />
+          <li class="example" data-expr="-x/y">\(\frac{\text{d}y}{\text{d}x} = -\frac{x}{y}\)</li>
+          <br />
+          <li class="example" data-expr="10*sin(x)">\(\frac{\text{d}y}{\text{d}x} = 10\sin(x)\)</li>
+          <br />
+          <li class="example" data-expr="x/100">\(\frac{\text{d}y}{\text{d}x} = \frac{x}{100}\)</li>
+        </ul>
+
+
+        <br />
+
+      </div>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>

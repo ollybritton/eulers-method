@@ -1,0 +1,87 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #040406;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+}
+
+canvas {
+  display: block;
+}
+
+main {
+  width: 100%;
+}
+
+.explanation {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.math {
+  width: 30%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px , 1fr)); 
+}
+
+
+.small {
+  font-size: 12px !important;
+}
+
+button {
+  font-size: 10px !important;
+  border-radius: 2px;
+  border: none;
+  padding: 7px;
+  background: #111326 !important;
+  color: white;
+  transition: background 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background:#171b34 !important;
+}
+
+.param {
+  color: gold;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 9px !important;
+}
+
+label {
+  font-size: 12px !important;
+}
+
+#controls-input-function {
+  margin-bottom: 3px;
+}
+
+.error {
+  font-size: 12px !important;
+  color: red;
+}
+
+ul {
+  list-style: none;
+}
+
+.example {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.example:hover {
+  opacity: 1;
+}
